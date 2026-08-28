@@ -2,13 +2,13 @@
 
 A small, working blog CMS starter kit: a public blog on the front, [Filament](https://filamentphp.com) at `/admin` for posts and categories.
 
-It is meant to be cloned and customized, not used as a hosted product. Built with Laravel 12, Filament 3, Spatie Permission, Livewire, and Tailwind CSS 4.
+It is meant to be cloned and customized, not used as a hosted product. Built with Laravel 13, Filament 5, Spatie Permission, Livewire 4, and Tailwind CSS 4.
 
 Repository: [github.com/Petar-V-Nikolov/laravel-blog-cms](https://github.com/Petar-V-Nikolov/laravel-blog-cms)
 
 ## Requirements
 
-- PHP 8.2+
+- PHP 8.3+
 - Composer
 - Node.js 18+ and npm (for Vite / Tailwind in development)
 - SQLite (default) or MySQL / PostgreSQL
@@ -43,7 +43,7 @@ Filament login stays at `/admin`. Only users with the `admin` or `editor` role c
 
 - Public blog index (`/`), post pages (`/blog/{slug}`), and category archives (`/category/{slug}`)
 - Draft vs published visibility (drafts never appear on the public site)
-- Filament resources for posts and categories (title, auto slug, excerpt, rich body, status, publish date, featured image URL/path)
+- Filament 5 resources for posts and categories (title, auto slug, excerpt, rich body, status, publish date, featured image URL/path)
 - Spatie roles: `admin` and `editor`
 - Demo seed: 3 categories, 6 published posts, 1 draft
 - PHPUnit coverage for public listing/show/archive and admin access

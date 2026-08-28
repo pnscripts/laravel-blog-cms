@@ -2,7 +2,7 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "petar-v-nikolov/laravel-blog-cms",
     "type": "project",
-    "description": "A Laravel 12 + Filament 3 blog CMS starter kit with a public blog, admin panel, roles, and demo seed.",
+    "description": "A Laravel 13 + Filament 5 blog CMS starter kit with a public blog, admin panel, roles, and demo seed.",
     "keywords": ["laravel", "filament", "blog", "cms", "starter-kit"],
     "license": "MIT",
     "authors": [
@@ -12,24 +12,24 @@
         }
     ],
     "require": {
-        "php": "^8.2",
-        "dedoc/scramble": "^0.12.19",
-        "filament/filament": "^3.3",
-        "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1",
-        "livewire/livewire": "^3.6",
-        "spatie/laravel-permission": "^6.17"
+        "php": "^8.3",
+        "dedoc/scramble": "^0.12.19 || ^0.13",
+        "filament/filament": "^5.7",
+        "laravel/framework": "^13.0",
+        "laravel/tinker": "^3.0",
+        "livewire/livewire": "^4.4",
+        "spatie/laravel-permission": "^8.0"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.15",
+        "barryvdh/laravel-debugbar": "^4.0",
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.2.2",
-        "laravel/pint": "^1.13",
-        "laravel/sail": "^1.41",
-        "laravel/telescope": "^5.7",
+        "laravel/pint": "^1.30",
+        "laravel/sail": "^1.67",
+        "laravel/telescope": "^5.22",
         "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.6",
-        "phpunit/phpunit": "^11.5.3"
+        "nunomaduro/collision": "^8.9",
+        "phpunit/phpunit": "^13.0"
     },
     "autoload": {
         "psr-4": {
