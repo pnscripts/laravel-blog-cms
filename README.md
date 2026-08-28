@@ -1,61 +1,68 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Blog CMS
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A small, working blog CMS starter kit: a public blog on the front, [Filament](https://filamentphp.com) at `/admin` for posts and categories.
 
-## About Laravel
+It is meant to be cloned and customized, not used as a hosted product. Built with Laravel 12, Filament 3, Spatie Permission, Livewire, and Tailwind CSS 4.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Repository: [github.com/Petar-V-Nikolov/laravel-blog-cms](https://github.com/Petar-V-Nikolov/laravel-blog-cms)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requirements
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP 8.2+
+- Composer
+- Node.js 18+ and npm (for Vite / Tailwind in development)
+- SQLite (default) or MySQL / PostgreSQL
 
-## Learning Laravel
+## Install
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+git clone https://github.com/Petar-V-Nikolov/laravel-blog-cms.git
+cd laravel-blog-cms
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+npm install
+npm run build
+php artisan serve
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Visit [http://127.0.0.1:8000](http://127.0.0.1:8000) for the public blog.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Admin
 
-## Laravel Sponsors
+- URL: `/admin`
+- Email: `admin@example.com`
+- Password: `password`
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Change these credentials before any real deployment.
 
-### Premium Partners
+Filament login stays at `/admin`. Only users with the `admin` or `editor` role can open the panel.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+## What is included
 
-## Contributing
+- Public blog index (`/`), post pages (`/blog/{slug}`), and category archives (`/category/{slug}`)
+- Draft vs published visibility (drafts never appear on the public site)
+- Filament resources for posts and categories (title, auto slug, excerpt, rich body, status, publish date, featured image URL/path)
+- Spatie roles: `admin` and `editor`
+- Demo seed: 3 categories, 6 published posts, 1 draft
+- PHPUnit coverage for public listing/show/archive and admin access
+- Laravel Telescope (disabled by default; `require-dev` only) and Scramble for API docs if you add APIs later
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## What is not included
 
-## Code of Conduct
+- Comments
+- Multi-tenancy
+- Media library / image uploads beyond a featured-image string
+- Newsletter, tags, SEO suite, or a public user registration flow
+- Production-ready Telescope access (the `viewTelescope` allowlist is empty on purpose)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Tests
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+php artisan test
+```
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+MIT. Copyright 2026 Petar Nikolov / PN Scripts. See [LICENSE](LICENSE).

@@ -1,16 +1,21 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "petar-v-nikolov/laravel-blog-cms",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "A Laravel 12 + Filament 3 blog CMS starter kit with a public blog, admin panel, roles, and demo seed.",
+    "keywords": ["laravel", "filament", "blog", "cms", "starter-kit"],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Petar Nikolov",
+            "homepage": "https://pnscripts.com"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "dedoc/scramble": "^0.12.19",
         "filament/filament": "^3.3",
         "laravel/framework": "^12.0",
-        "laravel/telescope": "^5.7",
         "laravel/tinker": "^2.10.1",
         "livewire/livewire": "^3.6",
         "spatie/laravel-permission": "^6.17"
@@ -21,6 +26,7 @@
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.41",
+        "laravel/telescope": "^5.7",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
         "phpunit/phpunit": "^11.5.3"
@@ -65,7 +71,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "laravel/telescope"
+            ]
         }
     },
     "config": {
