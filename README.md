@@ -4,7 +4,7 @@ A small, working blog CMS starter kit: a public blog on the front, [Filament](ht
 
 It is meant to be cloned and customized, not used as a hosted product. Built with Laravel 13, Filament 5, Spatie Permission, Livewire 4, and Tailwind CSS 4.
 
-Repository: [github.com/Petar-V-Nikolov/laravel-blog-cms](https://github.com/Petar-V-Nikolov/laravel-blog-cms)
+Repository: [github.com/pnscripts/laravel-blog-cms](https://github.com/pnscripts/laravel-blog-cms)
 
 ## Requirements
 
@@ -16,7 +16,7 @@ Repository: [github.com/Petar-V-Nikolov/laravel-blog-cms](https://github.com/Pet
 ## Install
 
 ```bash
-git clone https://github.com/Petar-V-Nikolov/laravel-blog-cms.git
+git clone https://github.com/pnscripts/laravel-blog-cms.git
 cd laravel-blog-cms
 composer install
 cp .env.example .env

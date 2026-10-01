@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "petar-v-nikolov/laravel-blog-cms",
+    "name": "pnscripts/laravel-blog-cms",
     "type": "project",
     "description": "A Laravel 13 + Filament 5 blog CMS starter kit with a public blog, admin panel, roles, and demo seed.",
     "keywords": ["laravel", "filament", "blog", "cms", "starter-kit"],
