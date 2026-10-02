@@ -1,4 +1,6 @@
-# Laravel Blog CMS
+# PN Press
+
+PN Press is a [PN Scripts](https://pnscripts.com) product ([product page](https://pnscripts.com/products/pn-press)). It was previously published as Laravel Blog CMS.
 
 A small, working blog CMS starter kit: a public blog on the front, [Filament](https://filamentphp.com) at `/admin` for posts and categories.
 
