@@ -10,7 +10,7 @@ Repository: [github.com/pnscripts/pn-press](https://github.com/pnscripts/pn-pres
 
 ## Requirements
 
-- PHP 8.3+
+- PHP 8.4+ (the committed `composer.lock` pins Symfony 8.1 packages that need PHP 8.4)
 - Composer
 - Node.js 18+ and npm (for Vite / Tailwind in development)
 - SQLite (default) or MySQL / PostgreSQL
